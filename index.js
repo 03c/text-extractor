@@ -2,7 +2,7 @@ const fs = require('fs')
 const Tesseract = require('tesseract.js')
 const ExcelJS = require('exceljs')
 
-// replace '/path/to/folder' with the actual path to the folder
+// path to the folder containing the images
 const folderPath = './Process'
 
 async function extractTextFromImages() {
@@ -53,9 +53,11 @@ async function extractTextFromImages() {
       console.log(result.data.text)
 
       // add a new row to the sheet with the extracted text
+      console.log(`Adding ${file} to the sheet`)
       sheet.addRow([file, result.data.text])
 
       // write the workbook to disk
+      console.log('Writing to output.xlsx')
       await workbook.xlsx.writeFile('output.xlsx')
     }
   } catch (err) {

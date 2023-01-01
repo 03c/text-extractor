@@ -1,0 +1,11 @@
+# ignore node_modules directory
+node_modules/
+
+# ignore Excel files
+*.xlsx
+
+# ignore tesseract training files
+*.traineddata
+
+# ignore Process directory
+Process/*

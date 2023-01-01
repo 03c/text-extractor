@@ -4,8 +4,13 @@
   "description": "Will extract text from images.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "extract": "node index.js"
   },
   "author": "Chris Child",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "exceljs": "^4.3.0",
+    "tesseract.js": "^4.0.2"
+  }
 }
